@@ -22,7 +22,8 @@ public class JWTSceret {
         privateKey = keyPair.getPrivate();
         publicKey = keyPair.getPublic();
     }
-    public String makeJwtToken(){
+    public String makeJwtToken(HashMap <String,String> map){
+        System.out.println(map);
         Date now = new Date();
         Date expireDate = new Date(now.getTime() + MINUTES);
 
@@ -31,7 +32,7 @@ public class JWTSceret {
                 .setIssuer("") // (2)
                 .setIssuedAt(now) // (3)
                 .setExpiration(expireDate); // (4)
-        HashMap<String, String> map = new HashMap<>();
+//        HashMap<String, String> map = new HashMap<>();
         Iterator iterator = map.keySet().iterator();
         while (iterator.hasNext()){
             String key = String.valueOf(iterator.next());
