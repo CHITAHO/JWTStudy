@@ -1,7 +1,6 @@
-package com.example.loginStudy.Controller;
+package com.example.jwtStudy.Controller;
 
-import com.example.loginStudy.Service.JwtService;
-import com.google.gson.Gson;
+import com.example.jwtStudy.Service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

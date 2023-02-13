@@ -1,4 +1,4 @@
-package com.example.loginStudy.util;
+package com.example.jwtStudy.util;
 
 import io.jsonwebtoken.Header;
 import io.jsonwebtoken.JwtBuilder;
@@ -12,12 +12,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 @Component
-public class JWTSceret {
+public class JWTSecret {
     private static final int MINUTES = 24*60*60*1000;
     PrivateKey privateKey;
     PublicKey publicKey;
 
-    public JWTSceret() throws NoSuchAlgorithmException {
+    public JWTSecret() throws NoSuchAlgorithmException {
         KeyPair keyPair = KeyPairGenerator.getInstance(SignatureAlgorithm.RS256.getFamilyName()).generateKeyPair();
         privateKey = keyPair.getPrivate();
         publicKey = keyPair.getPublic();
